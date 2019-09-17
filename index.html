@@ -9,7 +9,7 @@
       const username = $("#ipUsername").val();
       const password = $("#ipPassword").val();
 
-      $.post("http://localhost:3000/login", { username: username, password: password }, (data, status) => {
+      $.post("http://screenshare123.herokuapp.com/login", { username: username, password: password }, (data, status) => {
 
         if (status === 'success')
           alert(`Login success\n${data}`);
