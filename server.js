@@ -1,3 +1,5 @@
+const config = require('../config.json');
+
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
@@ -15,6 +17,6 @@ app.post('/login', (req, res) => {
   res.end(`You are now logged in Mr(s) ${username}`);
 });
 
-app.listen(5000, () => {
-  console.log("Started on http://localhost:3000");
-});
+config.PORT = process.env.PORT || config.PORT;
+
+server.run(config);
